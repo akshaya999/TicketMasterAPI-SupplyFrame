@@ -206,7 +206,11 @@ function display_card(response) {
     const eventDate = data.dates?.start?.localDate;
     const artists = data._embedded?.attractions?.map((attraction) => attraction.name).join(', ');
     const venueName = data._embedded?.venues?.[0]?.name;
-    const genres = data.classifications?.map((classification) => classification.genre.name).join(', ');
+    // const genres = data.classifications?.map((classification) => classification.genre.name).join(', ');
+    const genres = data.classifications
+    ?.map((classification) => classification?.genre?.name)
+    .filter(Boolean)
+    .join(', ')||"Unknown";
     const ticketStatus = data.dates?.status?.code;
 
 
