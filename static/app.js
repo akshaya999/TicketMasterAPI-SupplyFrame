@@ -247,7 +247,7 @@ function display_card(response) {
         <p><a href="${ticketmasterLink}" target="_blank">Ticketmaster Link</a></p>
       </div>
       <div class="seat-map">
-        <img src="${seatmapLink}" alt="Seat Map">
+        <img src="${seatmapLink}" onerror="this.onerror=null; this.src='image.jpg'"  alt="Seat Map">
       </div>
       </div>
     `;
