@@ -1,0 +1,228 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+// .ticketmaster-blue{
+//     background-image: url("unkle-crowd-silhouette.png");
+//     background-attachment: fixed;
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-color: rgba(200, 100, 0, 0.5);
+//     background-blend-mode: multiply;
+// }
+
+.ticketmaster-blue {
+    background-color: #222639;
+    background-image: linear-gradient(45deg, #393c4a 25%, transparent 25%, transparent 75%, #393c4a 75%, #393c4a), linear-gradient(45deg, #393c4a 25%, #181a24 25%, #181a24 75%, #393c4a 75%, #393c4a);
+    background-size: 10px 10px;;
+}
+
+
+
+
+// .eform{
+//     background-color: white;
+//     margin-top: 8%;
+// }
+
+.eform {
+    margin-top: 3%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eform h1 {
+    text-align: center;
+    color: #222639;
+    margin-bottom: 20px;
+}
+
+.eform label {
+    color: #222639;
+}
+
+.eform input[type="text"],
+.eform input[type="number"],
+.eform select {
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: #222639;
+    margin-bottom: 10px;
+}
+
+.big-details{
+    display: flex;
+}
+
+#cardiv {
+    max-width: 600px;
+    margin: 3% auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+  }
+  
+  #cardiv h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  #cardiv p {
+    margin: 8px 0;
+  }
+  
+  #cardiv a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .big-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .event-details {
+    flex-basis: 60%;
+  }
+  
+  .seat-map {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .seat-map img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  
+  .ticket-status-green {
+    background-color: #00cc00;
+    padding: 1%;
+    color: #ffffff;
+  }
+  
+  .ticket-status-red {
+    background-color: #ff0000;
+    padding: 1%;
+    color: #ffffff;
+  }
+  
+  .ticket-status-orange {
+    background-color: #ff6600;
+    padding: 1%;
+    color: #ffffff;
+  }
+  
+.eform input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.eform input[type="submit"],
+.eform input[type="reset"] {
+    width: 100px;
+    background-color: #222639;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+.eform ::placeholder {
+    color: #9fa1ab;
+}
+
+
+#submitBtn{
+    width: 100px;
+}
+
+#resetBtn{
+    margin-left: 10px;
+    width: 100px;
+}
+
+.noresults{
+    background-color: white;
+    text-align: center;
+    width: 800px;
+    margin-top: 4%;
+}
+
+.tabledata{
+    margin-top: 4%;
+}
+
+#myData table,td{
+    border: none;
+    margin: 100px auto;
+    font-size: 13px;
+    text-align: center;
+}
+
+.clicker{
+    all:unset;
+    cursor:pointer;
+}
+
+.header{
+    font-weight: bolder;
+    font-size: larger;
+    text-decoration: underline;
+}
+.datashow{
+    background-color: white;
+}
+
+#myData{
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 3%;
+}
+
+/* Styling for the table */
+#tableData {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tableData th,
+  #tableData td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tableData th {
+    background-color: #f2f2f2;
+  }
+  
+  /* Styling for alternate rows */
+  #tableData tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Styling for hover effect */
+  #tableData tbody tr:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* Styling for selected rows */
+  #tableData tbody tr.selected {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+
+input[type=text]:disabled {
+    background: #ddd;
+  }

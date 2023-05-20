@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TicketMaster API - SupplyFrame Demo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    
+    <link rel="stylesheet" href="main.css">
+
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  </head>
+  <body class="ticketmaster-blue" id="mainbody">
+    <div class="container border border-5 rounded g-3 p-4 col-md-4 eform">
+        <H1 style="text-align: center;">Event Search</H1>
+        <form id="searchForm" action="#" class="row g-3">
+            <div class="col-md-12 pt-4">
+                <label for="keyword" class="form-label">Keyword <span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="keyword" required>
+            </div>
+            <div class="col-md-6">
+                <label for="distance" class="form-label">Distance (miles)</label>
+                <input type="number" class="form-control" id="distance" placeholder="10">
+            </div>
+            <div class="col-md-6">
+                <label for="category" class="form-label"> Event Category<span style="color:red">*</span></label>
+                <select name="category" class="form-select" id="category" required>
+                    <option value="NULL">Default</option>
+                    <option value="KZFzniwnSyZfZ7v7nJ">Music</option>
+                    <option value="KZFzniwnSyZfZ7v7nE">Sports</option>
+                    <option value="KZFzniwnSyZfZ7v7na">Art</option>
+                    <option value="KZFzniwnSyZfZ7v7nn">Film</option>
+                </select>
+            </div>
+            <div class="col-md-12 pt-2">
+                <label for="Location" class="form-label">Location <span style="color:red">*</span></label> 
+                <input type="text" class="form-control" id="location" required>
+                <br>
+                <hr style="margin:0 auto;" id="divider">
+                <br>
+                <input class="p-2 form-check-input" type="checkbox" value="" id="AutoDetect" onclick="hidfunc()"> Auto-Dectect my location
+            </div>
+            <div class="col-md-12 pt-2 d-flex g-2 " style="justify-content: center;">
+            <input class="btn btn-warning btn-lg" id ="submitBtn" type="submit" onclick="test()" value="Submit">
+            <input class="btn btn-primary btn-lg" id="resetBtn" type="reset" onclick="clear_output()" value="Reset">
+            </div>
+        </form>
+    </div>
+    <div id= "tabledisplay" class="container"></div>
+    <script src="geohash.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#tableData').DataTable();
+        });
+    </script>
+     <script src="app.js"></script>
+     <div id= "card"></div>
+     <div id= "belowcard"></div>
+
+  </body>
+</html>
