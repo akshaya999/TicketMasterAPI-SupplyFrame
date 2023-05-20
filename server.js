@@ -11,6 +11,13 @@ app.use(cors())
 
 const PORT = process.env.PORT || 4000;
 
+
+const path = require('path');
+const mime = require('mime');
+
+app.use(express.static(path.join(__dirname, 'static')));
+
+
 app.use("/",require("./routes/contactRoutes.js"))
 
 app.listen(PORT,()=>{

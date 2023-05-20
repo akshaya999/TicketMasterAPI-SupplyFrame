@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.dataTables.min.css">
     
     <link rel="stylesheet" href="main.css">
 
@@ -21,7 +22,7 @@
         <form id="searchForm" action="#" class="row g-3">
             <div class="col-md-12 pt-4">
                 <label for="keyword" class="form-label">Keyword <span style="color:red">*</span></label>
-                <input type="text" class="form-control" id="keyword" required>
+                <input type="text" class="form-control" id="keyword" placeholder="Search for artist, events and venues" required>
             </div>
             <div class="col-md-6">
                 <label for="distance" class="form-label">Distance (miles)</label>
@@ -51,12 +52,13 @@
             </div>
         </form>
     </div>
-    <div id= "tabledisplay" class="container"></div>
+    <div id= "tabledisplay"></div>
     <script src="geohash.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.js"></script>
 
     <script>
         $(document).ready(function () {

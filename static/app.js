@@ -40,10 +40,12 @@ function display(d) {
     var division = document.createElement("div")
     division.id ="myData"
     division.setAttribute("class","container rounded")
+    // division.setAttribute("class","dtable-container")
     var table = document.createElement("table")
     table.id = "tableData"
-    table.setAttribute("class","table table-striped table-light")
+    table.setAttribute("class","table table-responsive table-striped table-light")
     // table.setAttribute("class","table table-striped")
+    table.setAttribute("width","100%")
     table.setAttribute("id","tableData")
     
     var tbody = document.createElement("tbody")
@@ -131,7 +133,7 @@ function display(d) {
     division.appendChild(table)
     document.getElementById("tabledisplay").appendChild(division);
 
-    $('#tableData').DataTable();
+    $('#tableData').DataTable({'responsive':true,"searching":false});
 }
 
 
@@ -145,7 +147,7 @@ function ipinfo(d) {
     then(response => {d["lat"] = response.split(",")[0];
                      d["long"]= response.split(",")[1];
                      d["geopoint"] = Geohash.encode(d["lat"],d["long"],7);
-                     fetch(`http://localhost:8000/events/${d['keyword']}/${d['category']}/${d['distance']}/miles/${d["geopoint"]}`).
+                     fetch(`/events/${d['keyword']}/${d['category']}/${d['distance']}/miles/${d["geopoint"]}`).
                      then(response => response.json().
                      then(response=>display(response)) )})
 }
@@ -189,7 +191,7 @@ function clear_output(){
 
 function card_present(e)
 {   
-    fetch(`http://localhost:8000/events_details/${e.target.id}`)
+    fetch(`/events_details/${e.target.id}`)
     .then(response => response.json())
     .then(response=>display_card(response))
 }
@@ -287,7 +289,7 @@ function test() {
             d["lat"]=data["results"][0]["geometry"]["location"]['lat'].toString();
             d["long"]=data["results"][0]["geometry"]["location"]['lng'].toString();
             d["geopoint"] = Geohash.encode(d["lat"],d["long"],7);
-            fetch(`http://localhost:8000/events/${d['keyword']}/${d['category']}/${d['distance']}/miles/${d["geopoint"]}`).
+            fetch(`/events/${d['keyword']}/${d['category']}/${d['distance']}/miles/${d["geopoint"]}`).
             then(response => response.json()).
             then(data => obj = data).
             then(()=>display(obj))

@@ -10955,7 +10955,6 @@ textarea.form-control-lg {
 .noresults {
   background-color: white;
   text-align: center;
-  width: 800px;
   margin-top: 4%;
 }
 
@@ -10990,38 +10989,6 @@ textarea.form-control-lg {
   padding-top: 1%;
   padding-bottom: 1%;
   margin-top: 3%;
-}
-
-/* Styling for the table */
-#tableData {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#tableData th,
-#tableData td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#tableData th {
-  background-color: #f2f2f2;
-}
-
-/* Styling for alternate rows */
-#tableData tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Styling for hover effect */
-#tableData tbody tr:hover {
-  background-color: #e2e2e2;
-}
-
-/* Styling for selected rows */
-#tableData tbody tr.selected {
-  background-color: #ffc107;
-  color: #fff;
 }
 
 input[type=text]:disabled {
