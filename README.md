@@ -6,4 +6,4 @@ Node server.js
 
 Additionally, if you have nodemon you can run: nodemon server.js. 
 
-Upon successful deployment of the server,you can acess website on port 8000 (http://localhost:8000).
+Upon successful deployment of the server,you can acess website on port 8000 (http://localhost:8000). If port 8000 is not available for you, you can change the port in the .env file.
