@@ -25,7 +25,6 @@ router.route("/events/:keyword/:segmentID/:radius/:unit/:geopoint").get((req,res
         base_url = `https://app.ticketmaster.com/discovery/v2/events.json?apikey=${apikey}&keyword=${req.params.keyword}&radius=${req.params.radius}&unit=${req.params.unit}&geoPoint=${req.params.geopoint}`
     }
     console.log(base_url)
-    console.log(base_url)
     axios.get(base_url).then(function(response){
         res.send(response.data)
     })
@@ -45,14 +44,6 @@ router.route("/venues/:keyword").get((req,res)=>{
         res.send(response.data)
     })
 })
-
-router.route("/ipinfo").get((req,res)=>{
-    let base_url = `https://ipinfo.io/?token=ff0a5f7fb71d3b`
-    console.log(base_url)
-    axios.get(base_url).then(function(response){
-        res.send(response.data)
-    })
-}) 
 
 
 

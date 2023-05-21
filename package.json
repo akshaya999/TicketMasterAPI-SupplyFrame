@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "author": "",
@@ -20,5 +20,9 @@
     "express-session": "^1.17.3",
     "latlon-geohash": "^2.0.0",
     "nodemon": "^2.0.22"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3"
   }
 }
